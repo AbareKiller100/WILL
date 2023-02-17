@@ -13,7 +13,16 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  var c=0;
+  var sNum=String(num); var aSNum=sNum.split(''); 
+  var aNum=aSNum.map((num)=>{return Number(num);});
+  var j=(aNum.length-1);
+  for(let i = 0; i < aNum.length; i++) {
+    while(i!=aNum.length) {
+      if(aNum[i]===aNum[j]){c++;}
+      break; } 
+      j--; }
+if(c===aNum.length){return true;}else{return false;}
 }
 
 // No modifiques nada debajo de esta linea //
